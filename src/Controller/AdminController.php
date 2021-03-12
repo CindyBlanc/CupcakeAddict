@@ -49,6 +49,7 @@ class AdminController extends AbstractController
                 $cupcake->setAuteur($user);
                 
                 $modif = $cupcake->getId() !== null; // On verifie si l'ID existe
+                // dd($cupcake);
 
                 $entityManager->persist($cupcake);
                 $entityManager->flush();
