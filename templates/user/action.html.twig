@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une recette{% endblock %}
+    {% block titre %} {% endblock %}
+{% block body %}
+    <section>
+
+    <h1>Ajouter une recette</h1>
+
+    <div class="retour">
+        <a href="{{path('admin')}}"><i class="fas fa-reply"></i></a>
+    </div>
+    <div class="formCompte">
+        {{ form_start(form) }}
+
+        {{ form_widget(form) }} 
+
+        <button type="submit" class="favorite styled">Envoyer</button>
+
+        {{ form_end(form) }}
+    </div>
+
+
+    </section>
+{% endblock %}

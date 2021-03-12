@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+    {% block titre %} {% endblock %}
+{% block body %}
+
+    <section>
+
+    <h1>Mon compte</h1>
+
+
+    <ul>
+        <li><a href="{{path('creationCupcake')}}">Ajouter une nouvelle recette</a></li>
+    </ul>
+
+    <div class="compteBox">
+
+        <table>
+        <thead>
+            <tr>
+                <td colspan="6" class="titreTable" >Mes recettes</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Auteur</td>
+                <td>Image</td>
+                <td>Nom</td>
+                <td colspan="2">Action</td>
+            </tr>
+        </thead>
+        <tbody>
+                {% for cupcake in cupcakes %}
+            <tr>
+                <td>{{ cupcake.id }}</td>
+                <td>auteur</td>
+                <td><img src="{{ asset('image/' ~ cupcake.image) }}" alt=""></td>
+                <td>{{ cupcake.nom }}</td>
+                <td>
+                    <a href="{{path('cupcake_id',{'id' : cupcake.id})}}"><i class="fas fa-eye"></i></a>
+                </td>
+
+                <td>
+                    <a href="{{path('modificationCupcake',{'id' : cupcake.id})}}"><i class="fas fa-exchange-alt"></i></a>
+                </td>
+                <td>
+                    <form method="POST" action="{{path('supprimerCupcake',{'id' : cupcake.id})}}">
+                        <input type="hidden" name="_method" value="delete">
+                        <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ cupcake.id)}}">
+                        <button type="submit"><i class="fas fa-trash-alt"></i></button>
+
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+        </table>
+
+    
+    </section>
+{% endblock %}

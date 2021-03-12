@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Je le connecte{% endblock %}
+    {% block titre %} {% endblock %}
+{% block body %}
+    <section>
+        <div class="retour">
+            <a href="{{path('accueil')}}"><i class="fas fa-reply"></i></a>
+        </div>
+        <h1>J'ai déjà un compte ?</h1>
+        <div class="boxReponse">
+            <div class="directionsecu">
+                <a href="{{path('app_register')}}">Je m'inscris <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="directionsecu">
+                <a href="{{path('app_login')}}">Je me connecte <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

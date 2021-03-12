@@ -1,0 +1,66 @@
+body{
+    section{
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 5vh;
+            justify-items: center;
+            margin: 5% 10%;
+            .boxArticle {
+                background-color: $turquoise;
+                width: 300px;
+                height: 370px;
+                text-align: center;
+                border-radius: 170px;
+                .nomCupArticle{
+                    padding: 4vh 0 0 0;
+    
+                }
+                .imgCupArticle{
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $bleu;
+            }
+        }
+        .containerId{
+            display: flex;
+            justify-content: center;
+            .boxArticleId {
+                background-color: $turquoise;
+                width: 40vw;
+                text-align: center;
+                border-radius: 20px;
+                padding: 0 7vw;
+                .nomCupArticleId {
+                    padding: 4vh 0 3vh 0;
+    
+                }
+                .imgCupArticleId {
+                    img{
+                        width: 400px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                .recetteCupArticleId{
+                    margin-top: 5vh;
+                }
+                .auteurId{
+                    margin-top: 10vh;
+                    text-align: end;
+                }
+            }
+    
+        }
+    }
+
+}

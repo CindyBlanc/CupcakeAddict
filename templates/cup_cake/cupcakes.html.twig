@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les CupCakes{% endblock %}
+    {% block titre %} {% endblock %}
+{% block body %}
+    <section>
+        <div class="retour">
+            <a href="{{path('accueil')}}"><i class="fas fa-reply"></i></a>
+        </div>
+        <h1>Les Cupcakes</h1>
+
+
+        <div class="container">
+        
+        {% for cupcake in cupcakes %}
+
+        <a href="{{path('cupcake_id', {'id' : cupcake.id})}}">
+            <div class="boxArticle">
+                <div class="nomCupArticle">
+                    <h2>{{ cupcake.nom }}</h2>
+                </div>
+                <div class="imgCupArticle">
+                    <img src="{{ asset('image/' ~ cupcake.image) }}" alt="">
+                </div>
+            </div>
+        </a>
+
+        {% endfor %}
+
+
+
+        </div>
+
+
+    </section>
+{% endblock %}

@@ -1,0 +1,72 @@
+body{
+    section{
+        .retour{
+            margin: 10vh 0 0 5vw;
+            a{
+                color: $bleu;
+                font-size: 30px;
+
+            }
+        }
+        h1{
+            font-size: 35px;
+            text-align: center;
+            color: $bleu;
+
+        }
+        .boxReponse{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .directionsecu{
+                background: $rose;
+                padding:15px 50px;
+                border-radius: 10px;
+                margin-top: 10vh;
+
+                a{
+                    font-size: 30px;
+                    text-decoration: none;
+                    color: $bleu;
+                    i{
+                      font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .formCompte{
+            display: flex;
+            flex-direction: column;
+            margin: 0 30%;
+            font-size: 25px;
+            .formG{
+                p{
+                    margin: 10px 0;
+                }
+                .form{
+                    background-color: $bleu;
+                    color: white;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 10px;
+
+                }
+                .btn{
+                    background-color: $rose;
+                    padding: 0 10px;
+                    border-radius: 10px;
+                    margin-top: 2vh;
+                    border: none;
+                    font-family: 'Pacifico';
+                    font-size: 25px;
+                    color: $bleu;
+
+                }
+
+            }
+
+
+        }
+    }
+}

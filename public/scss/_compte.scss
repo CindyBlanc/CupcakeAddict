@@ -1,0 +1,39 @@
+body{
+    section{
+        .compteBox{
+            margin-left: 10vw;
+            table{
+                background-color: $turquoise;
+                border-radius: 10px;
+                margin: auto;
+                padding: 24px;
+                thead{
+                    tr{
+                        text-align: center;
+                        td {
+                            padding-bottom: 8px;
+                            border-bottom: 2px dashed pink;
+
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            padding: 8px;
+                            border-bottom: 2px dashed pink;
+                            img{
+                                width:100px; 
+                                width: 100px;
+                                height: 100px; 
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
