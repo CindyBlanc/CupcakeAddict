@@ -29,7 +29,11 @@
             </tr>
         </thead>
         <tbody>
+
+        
                 {% for cupcake in cupcakes %}
+                {% if (cupcake.auteur) is same as app.user %} 
+
             <tr>
                 <td>{{ cupcake.id }}</td>
                 <td>{{ cupcake.auteur.username }}</td>
@@ -51,6 +55,7 @@
                     </form>
                 </td>
             </tr>
+        {% endif %}
         {% endfor %}
         </tbody>
 

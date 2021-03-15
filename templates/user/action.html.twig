@@ -5,21 +5,33 @@
 {% block body %}
     <section>
 
-    <h1>Ajouter une recette</h1>
+        <h1>Ajouter une recette</h1>
 
-    <div class="retour">
-        <a href="{{path('admin')}}"><i class="fas fa-reply"></i></a>
-    </div>
-    <div class="formCompte">
-        {{ form_start(form) }}
+        <div class="retour">
+            <a href="{{path('user')}}"><i class="fas fa-reply"></i></a>
+        </div>
 
-        {{ form_widget(form) }} 
+        <div class="containerAdd">
+            <div class="boxArticleAdd">
+                {{ form_start(form) }}
 
-        <button type="submit" class="favorite styled">Envoyer</button>
+                <div class="CupArticleAdd">
+                    {{ form_label(form.nom) }} 
+                    {{ form_widget(form.nom) }}
+                </div>
+                <div class="CupArticleAdd">
+                    {{ form_row(form.imageFile) }} 
+                </div>
+                <div class="CupArticleAdd">
+                    {{ form_row(form.ingredient) }} 
+                    {{ form_row(form.recette) }}
+                    {{ form_row(form.categorie) }} 
+                </div>
 
-        {{ form_end(form) }}
-    </div>
+                <button class="btn" type="submit">Envoyer</button>
 
-
+                {{ form_end(form) }}    
+            </div>
+        </div>
     </section>
 {% endblock %}
