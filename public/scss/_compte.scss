@@ -1,7 +1,10 @@
 body{
     section{
+        .welcome{
+            text-align: center;
+        }
         .compteBox{
-            margin-left: 10vw;
+            margin: auto;
             table{
                 background-color: $turquoise;
                 border-radius: 10px;
@@ -13,7 +16,9 @@ body{
                         td {
                             padding-bottom: 8px;
                             border-bottom: 2px dashed pink;
-
+                            a{
+                                color: $rose;
+                            }
                         }
                     }
                 }
@@ -28,6 +33,15 @@ body{
                                 height: 100px; 
                                 object-fit: cover;
                                 border-radius: 10px;
+                            }
+                            a{
+                                color: $bleu;
+
+                            }
+                            button{ 
+                                border: none;
+                                background-color: inherit;
+                                color: $bleu;
                             }
                         }
                     }

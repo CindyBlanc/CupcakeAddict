@@ -1,21 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Je le connecte{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
 
-    <h1>Register</h1>
+    <section>
+        <div class="retour">
+            <a href="{{path('dejauncompte')}}"><i class="fas fa-reply"></i></a>
+        </div>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.username) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+            <h1>M'inscrire</h1>
+        
+            <div class="formCompte">
+            {{ form_start(registrationForm) }}
+
+            <div class="formG">
+                    {{ form_row(registrationForm.username, {label: 'Identifiant '}) }}
+                    
+            </div>
+            <div class="formG">
+            {{ form_row(registrationForm.plainPassword, {label: 'Mot de passe '}) }}
+            </div>
+            <div class="formG">
+
+            {{ form_row(registrationForm.verificationPassword, {label: 'Vérification du mot de passe '}) }}
+            </div>
+
+            <div class="formG">
+            {{ form_row(registrationForm.agreeTerms , {label: "J'accepte les termes "}) }}
+            <button type="submit" class="btn"> S'inscrire</button>
+        {{ form_end(registrationForm) }}
+            </div>
+
+        </div>
+
+    </section>
 {% endblock %}

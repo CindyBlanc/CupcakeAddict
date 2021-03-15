@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Cupcake;
 use App\Entity\Categorie;
+use App\Entity\Utilisateur;
 use Symfony\Component\HttpFoundation\Response;
 use App\Controller\Admin\CupcakeCrudController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -37,6 +38,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Important');
         yield MenuItem::linktoCrud('Recette', 'fa fa-home', Cupcake::class);
         yield MenuItem::linktoCrud('Catégorie', 'fa fa-file', Categorie::class);
+        yield MenuItem::linktoCrud('Utilisateur', 'fa fa-file', Utilisateur::class);
+
 
     }
 }
