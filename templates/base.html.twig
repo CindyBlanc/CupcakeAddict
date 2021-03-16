@@ -64,12 +64,8 @@
         {% block body %}{% endblock %}
 
         <footer>
-                <ul>
-                    <li><a href="#">Site de Flo</a></li>
-                 {% if is_granted('ROLE_ADMIN') %}
-                    <li class="admin"><a href="{{path('admin')}}"> Admin </a></li>
-                {% endif %}
-                </ul>
+            <p>© 2021 <a href="https://cindyblanc.com/" target="_blank"> Cindy Blanc </a> | Tous Droits Réservées</p>
+
         </footer>
     </body>
 </html>

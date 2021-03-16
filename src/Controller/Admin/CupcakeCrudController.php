@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 
 class CupcakeCrudController extends AbstractCrudController
 {
@@ -22,8 +23,8 @@ class CupcakeCrudController extends AbstractCrudController
     {
         return [
             TextField::new('nom'),
-            TextEditorField::new('ingredient'),
-            TextEditorField::new('recette'),
+            TextareaField::new('ingredient'),
+            TextareaField::new('recette'),
             AssociationField::new('categorie'),
             ImageField::new('image')->setBasePath('image')->setUploadDir('/public/image'),
             DateTimeField::new('updatedAt'),

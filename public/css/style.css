@@ -35,12 +35,15 @@ body .navbarDesktop .logo {
 body .navbarDesktop .logo img {
   width: 200px;
 }
+body .navbarDesktop .logo img:hover {
+  transform: rotateY(360deg);
+  transition: 2s;
+}
 body .navbarDesktop .navbar {
   width: 40%;
 }
 body .navbarDesktop .navbar .bgRose {
   background-color: #ef85a5;
-  width: 90%;
   height: 60px;
   border-radius: 100px 0px 0px 100px;
   margin-top: 60px;
@@ -69,47 +72,33 @@ body .navbarMobile {
 }
 body footer {
   background-color: #73cfd0cc;
+  padding: 2px;
 }
-body footer ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-between;
-  padding: 10px;
-  margin: auto;
+body footer p {
+  text-align: center;
 }
-body footer ul li {
-  list-style: none;
-  padding: 10px 50px;
-}
-body footer ul li a {
+body footer p a {
   text-decoration: none;
   color: #2f5761;
 }
-body footer ul li a:hover {
+body footer p a:hover {
   color: #ef85a5;
-}
-body footer ul .admin {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10%;
-}
-body footer ul .admin a {
-  text-decoration: none;
-  background-color: #2f5761;
-  padding: 0 10px;
-  border-radius: 10px;
-  border: none;
-  font-family: "Pacifico";
-  font-size: 20px;
-  color: white;
 }
 
 body section {
   margin-bottom: 30vh;
 }
 body section .welcome {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+body section .welcome a {
+  text-decoration: none;
+  color: #2f5761;
+}
+body section .welcome a:hover {
+  color: #ef85a5;
 }
 body section .compteBox {
   margin: auto;
@@ -168,7 +157,7 @@ body section .containerAdd {
 body section .containerAdd .boxArticleAdd {
   background-color: #73cfd0cc;
   border-radius: 20px;
-  padding: 0 7vw;
+  padding: 10vh 10vw;
   margin: auto;
 }
 body section .containerAdd .boxArticleAdd .CupArticleAdd {
@@ -210,13 +199,18 @@ body section .containerAdd .boxArticleAdd .CupArticleAdd textarea {
 }
 body section .containerAdd .boxArticleAdd .btn {
   background-color: #ef85a5;
+  border: 2px solid #ef85a5;
   padding: 0 10px;
   border-radius: 10px;
   margin-top: 2vh;
-  border: none;
   font-family: "Pacifico";
   font-size: 25px;
   color: #2f5761;
+  cursor: pointer;
+}
+body section .containerAdd .boxArticleAdd .btn:hover {
+  background-color: #73cfd0cc;
+  transition: 1s;
 }
 
 body .aPropos {
@@ -245,6 +239,16 @@ body section .container .boxArticle .imgCupArticle img {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+  box-shadow: 15px -15px 30px #2f5761;
+}
+body section .container .boxArticle .imgCupArticle img:hover {
+  width: 250px;
+  height: 250px;
+  transition: width 1s, height 1s;
+}
+body section .container .boxArticle:hover {
+  box-shadow: 10px -10px 50px #2f5761;
+  transition: 2s;
 }
 body section .container a {
   text-decoration: none;
@@ -256,28 +260,44 @@ body section .containerId {
 }
 body section .containerId .boxArticleId {
   background-color: #73cfd0cc;
-  margin: auto;
+  margin: 10px;
   text-align: center;
   border-radius: 20px;
-  padding: 0 7vw;
+  padding: 0 2vw;
+  width: 70%;
 }
 body section .containerId .boxArticleId .nomCupArticleId {
   padding: 4vh 0 3vh 0;
 }
 body section .containerId .boxArticleId .imgCupArticleId img {
-  width: 400px;
+  width: 350px;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
 }
-body section .containerId .boxArticleId .recetteCupArticleId {
+body section .containerId .boxArticleId .recette {
+  display: flex;
+}
+body section .containerId .boxArticleId .recette .ingredientCupArticleId {
+  width: 30%;
   margin-top: 5vh;
-}
-body section .containerId .boxArticleId .recetteCupArticleId p {
+  background: pink;
+  border-radius: 10px;
+  padding: 20px 5px;
+  text-align: start;
   font-size: 18px;
+}
+body section .containerId .boxArticleId .recette .recetteCupArticleId {
+  width: 100%;
+  margin: 5vh 0 0 5vw;
+}
+body section .containerId .boxArticleId .recette .recetteCupArticleId p {
+  font-size: 20px;
 }
 body section .containerId .boxArticleId .auteurId {
   margin-top: 10vh;
   text-align: end;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1203px) {
@@ -342,6 +362,18 @@ body section .containerId .boxArticleId .auteurId {
   body section .formCompte .formG {
     font-size: 30px;
   }
+  body section .containerId .boxArticleId .imgCupArticleId img {
+    width: 200px;
+  }
+  body section .containerId .boxArticleId .recette {
+    display: inherit;
+  }
+  body section .containerId .boxArticleId .recette .ingredientCupArticleId {
+    width: inherit;
+  }
+  body section .containerId .boxArticleId .recette .recetteCupArticleId {
+    width: inherit;
+  }
 }
 body section .retour {
   margin: 10vh 0 0 5vw;
@@ -349,6 +381,14 @@ body section .retour {
 body section .retour a {
   color: #2f5761;
   font-size: 30px;
+}
+body section .retour a:hover {
+  color: #ef85a5;
+  transition: 2s;
+}
+body section .retour:hover {
+  transform: rotateX(180deg);
+  transition: 2s;
 }
 body section h1 {
   font-size: 35px;
@@ -361,10 +401,15 @@ body section .boxReponse {
   justify-content: space-evenly;
 }
 body section .boxReponse .directionsecu {
-  background: #73cfd0cc;
-  padding: 15px 50px;
-  border-radius: 10px;
+  padding: 0px 40px;
   margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 230px;
+  height: 100px;
+  border-radius: 10px;
 }
 body section .boxReponse .directionsecu a {
   font-size: 30px;
@@ -373,6 +418,97 @@ body section .boxReponse .directionsecu a {
 }
 body section .boxReponse .directionsecu a i {
   font-size: 20px;
+}
+body section .boxReponse .directionsecu:hover::before, body section .boxReponse div:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 100px;
+  background: #ef85a5;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+body section .boxReponse div:hover:after {
+  background: #73cfd0cc;
+  animation: 2s counterclockwise infinite;
+}
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
 }
 body section .formCompte {
   display: flex;
@@ -399,10 +535,14 @@ body section .formCompte .formG .btn {
   padding: 0 10px;
   border-radius: 10px;
   margin-top: 2vh;
-  border: none;
+  border: 2px solid #ef85a5;
   font-family: "Pacifico";
   font-size: 25px;
   color: #2f5761;
+}
+body section .formCompte .formG .btn:hover {
+  background-color: #73cfd0cc;
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

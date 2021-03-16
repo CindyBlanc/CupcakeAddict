@@ -29,12 +29,15 @@ body{
             img{
                 width: 200px;
             }
+            img:hover{
+                transform: rotateY(360deg);
+                transition: 2s;
+            }
         }
         .navbar{
             width: 40%;
             .bgRose{
                 background-color: $rose;
-                width: 90%;
                 height: 60px;
                 border-radius: 100px 0px 0px 100px;
                 margin-top: 60px;
@@ -52,12 +55,9 @@ body{
                             text-decoration: none;
                             color: $bleu;
                         }
-
                     }
-                    
                 }
             }
-
         }
     }
     .enteteMobile{
@@ -68,43 +68,17 @@ body{
     }
     footer{
         background-color: $turquoise;
-        ul{
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            justify-content: space-between;
-            padding: 10px;
-            margin: auto;
-            li{
-                list-style: none;
-                padding: 10px 50px;
-                a{
-                    text-decoration: none;
-                    color: $bleu;
-                }
-                a:hover{
-                    color: $rose;
-                }
-
+        padding: 2px;
+        p{
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: $bleu;
             }
-            .admin{
-                display: flex;
-                justify-content: flex-end;
-                margin-right: 10%;
-                a{
-                    text-decoration: none;
-                    background-color: $bleu;
-                    padding: 0 10px;
-                    border-radius: 10px;
-                    border: none;
-                    font-family: 'Pacifico';
-                    font-size: 20px;
-                    color: white;
-                }
+            a:hover {
+                color: $rose;
             }
-
         }
-
     } 
 
 }

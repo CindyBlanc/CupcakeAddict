@@ -2,7 +2,16 @@ body{
     section{
         margin-bottom: 30vh;
         .welcome{
+            display: flex;
+            flex-direction: column;
             text-align: center;
+            a{
+                text-decoration: none;
+                color: $bleu;
+            }
+            a:hover{
+                color: $rose;
+            }
         }
         .compteBox{
             margin: auto;

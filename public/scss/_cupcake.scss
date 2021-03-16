@@ -2,6 +2,7 @@ body{
     .aPropos{
         margin: 30vh 40vw 30vh 5vh;
     }
+
     section{
         .container{
             display: grid;
@@ -26,43 +27,75 @@ body{
                         border-radius: 50%;
                         object-fit: cover;
                         object-position: center;
+                        box-shadow: 15px -15px 30px #2f5761;
+                    }
+                    img:hover{
+                        width: 250px;
+                        height: 250px;
+                        transition: width 1s, height 1s;
                     }
                 }
+            }
+            .boxArticle:hover{
+                box-shadow: 10px -10px 50px #2f5761;
+                transition: 2s;
+    
             }
             a{
                 text-decoration: none;
                 color: $bleu;
             }
         }
+
+
         .containerId{
             display: flex;
             justify-content: center;
             .boxArticleId {
                 background-color: $turquoise;
-                margin: auto;
+                margin: 10px;
                 text-align: center;
                 border-radius: 20px;
-                padding: 0 7vw;
+                padding: 0 2vw;
+                width: 70%;
                 .nomCupArticleId {
                     padding: 4vh 0 3vh 0;
     
                 }
                 .imgCupArticleId {
                     img{
-                        width: 400px;
+                        width: 350px;
                         object-fit: cover;
                         object-position: center;
+                        border-radius: 10px;
                     }
                 }
-                .recetteCupArticleId{
-                    margin-top: 5vh;
-                    p{
+                .recette {
+                    display: flex;
+                    .ingredientCupArticleId{
+                        width: 30%;
+                        margin-top: 5vh;
+                        background: pink;
+                        border-radius: 10px;
+                        padding: 20px 5px;      
+                        text-align: start;
                         font-size: 18px;
+
                     }
+                    .recetteCupArticleId{
+                        width: 100%;
+                        margin: 5vh 0 0 5vw;
+                        p{
+                            font-size: 20px;
+                        }
+                    }
+
                 }
+
                 .auteurId{
                     margin-top: 10vh;
                     text-align: end;
+                    font-size: 20px;
                 }
             }
     

@@ -16,10 +16,16 @@
                 <div class="imgCupArticleId">
                     <img src="{{ asset('image/' ~ cupcake.image) }}" alt="">
                 </div>
-                <div class="recetteCupArticleId">
+                <div class="recette">
+                <div class="ingredientCupArticleId">
                 <p>{{ cupcake.ingredient | nl2br }}</p>
+                </div>
+                <div class="recetteCupArticleId">
+
                 <p>{{ cupcake.recette | nl2br }}</p>
                 </div>
+                </div>
+     
                 <div class="auteurId">
                 <p>Recette de {{ cupcake.auteur.username }}</p>
                 </div>

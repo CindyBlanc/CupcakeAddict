@@ -89,6 +89,25 @@
                     font-size: 30px;
                 }
             }
+
+            .containerId{
+                .boxArticleId{
+                    .imgCupArticleId{
+                        img{
+                            width: 200px;
+                        }
+                    }
+                    .recette{
+                        display: inherit;
+                        .ingredientCupArticleId{
+                            width: inherit;
+                        }
+                        .recetteCupArticleId{
+                            width: inherit;
+                        }
+                    }
+                }
+            }
         }
     }
 }
