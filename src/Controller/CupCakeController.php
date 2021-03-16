@@ -27,6 +27,7 @@ class CupCakeController extends AbstractController
         $cupcakes = $repository->findAll();
         return $this->render('cup_cake/cupcakes.html.twig', [
             'cupcakes'=>$cupcakes,
+
             ]);
     }
 
@@ -42,7 +43,7 @@ class CupCakeController extends AbstractController
 
     }
 
-
+    
     /**
      * @Route("/dejauncompte", name="dejauncompte")
      */

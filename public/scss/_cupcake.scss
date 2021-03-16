@@ -1,4 +1,7 @@
 body{
+    .aPropos{
+        margin: 30vh 40vw 30vh 5vh;
+    }
     section{
         .container{
             display: grid;
@@ -8,18 +11,18 @@ body{
             margin: auto;
             .boxArticle {
                 background-color: $turquoise;
-                width: 300px;
-                height: 370px;
+                width: 340px;
+                height: 420px;
                 text-align: center;
                 border-radius: 170px;
                 .nomCupArticle{
-                    padding: 4vh 0 0 0;
+                    padding: 4vh 0 2vh 0;
     
                 }
                 .imgCupArticle{
                     img{
-                        width: 200px;
-                        height: 200px;
+                        width: 230px;
+                        height: 230px;
                         border-radius: 50%;
                         object-fit: cover;
                         object-position: center;
@@ -53,6 +56,9 @@ body{
                 }
                 .recetteCupArticleId{
                     margin-top: 5vh;
+                    p{
+                        font-size: 18px;
+                    }
                 }
                 .auteurId{
                     margin-top: 10vh;

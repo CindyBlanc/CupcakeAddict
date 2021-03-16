@@ -9,7 +9,7 @@ body {
   background-size: cover;
   margin: 0;
   font-family: "Pacifico", fantasy;
-  color: #2F5761;
+  color: #2f5761;
 }
 body .navbarDesktop {
   display: flex;
@@ -24,7 +24,7 @@ body .navbarDesktop .nom {
 }
 body .navbarDesktop .nom a {
   text-decoration: none;
-  color: #2F5761;
+  color: #2f5761;
   margin-top: 60px;
 }
 body .navbarDesktop .logo {
@@ -39,7 +39,7 @@ body .navbarDesktop .navbar {
   width: 40%;
 }
 body .navbarDesktop .navbar .bgRose {
-  background-color: #EF86A6;
+  background-color: #ef85a5;
   width: 90%;
   height: 60px;
   border-radius: 100px 0px 0px 100px;
@@ -59,7 +59,7 @@ body .navbarDesktop .navbar .bgRose ul li {
 }
 body .navbarDesktop .navbar .bgRose ul li a {
   text-decoration: none;
-  color: #2F5761;
+  color: #2f5761;
 }
 body .enteteMobile {
   display: none;
@@ -67,7 +67,47 @@ body .enteteMobile {
 body .navbarMobile {
   display: none;
 }
+body footer {
+  background-color: #73cfd0cc;
+}
+body footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  padding: 10px;
+  margin: auto;
+}
+body footer ul li {
+  list-style: none;
+  padding: 10px 50px;
+}
+body footer ul li a {
+  text-decoration: none;
+  color: #2f5761;
+}
+body footer ul li a:hover {
+  color: #ef85a5;
+}
+body footer ul .admin {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+body footer ul .admin a {
+  text-decoration: none;
+  background-color: #2f5761;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Pacifico";
+  font-size: 20px;
+  color: white;
+}
 
+body section {
+  margin-bottom: 30vh;
+}
 body section .welcome {
   text-align: center;
 }
@@ -75,7 +115,7 @@ body section .compteBox {
   margin: auto;
 }
 body section .compteBox table {
-  background-color: #73cfd0b6;
+  background-color: #73cfd0cc;
   border-radius: 10px;
   margin: auto;
   padding: 24px;
@@ -84,11 +124,15 @@ body section .compteBox table thead tr {
   text-align: center;
 }
 body section .compteBox table thead tr td {
+  font-size: 20px;
   padding-bottom: 8px;
   border-bottom: 2px dashed pink;
 }
 body section .compteBox table thead tr td a {
-  color: #EF86A6;
+  color: #ef85a5;
+}
+body section .compteBox table thead tr td a:hover {
+  color: #2f5761;
 }
 body section .compteBox table tbody tr td {
   padding: 8px;
@@ -102,12 +146,19 @@ body section .compteBox table tbody tr td img {
   border-radius: 10px;
 }
 body section .compteBox table tbody tr td a {
-  color: #2F5761;
+  color: #2f5761;
 }
 body section .compteBox table tbody tr td button {
+  cursor: pointer;
   border: none;
   background-color: inherit;
-  color: #2F5761;
+  color: #2f5761;
+}
+body section .compteBox table tbody tr td a:hover {
+  color: #ef85a5;
+}
+body section .compteBox table tbody tr td button:hover {
+  color: #ef85a5;
 }
 
 body section .containerAdd {
@@ -115,7 +166,7 @@ body section .containerAdd {
   justify-content: center;
 }
 body section .containerAdd .boxArticleAdd {
-  background-color: #73cfd0b6;
+  background-color: #73cfd0cc;
   border-radius: 20px;
   padding: 0 7vw;
   margin: auto;
@@ -130,7 +181,7 @@ body section .containerAdd .boxArticleAdd .CupArticleAdd label {
   padding-bottom: 2vh;
 }
 body section .containerAdd .boxArticleAdd .CupArticleAdd input {
-  background-color: #2F5761;
+  background-color: #2f5761;
   color: white;
   border: none;
   border-radius: 5px;
@@ -141,7 +192,7 @@ body section .containerAdd .boxArticleAdd .CupArticleAdd div {
   flex-direction: column;
 }
 body section .containerAdd .boxArticleAdd .CupArticleAdd select {
-  background-color: #2F5761;
+  background-color: #2f5761;
   color: white;
   border: none;
   border-radius: 5px;
@@ -153,21 +204,24 @@ body section .containerAdd .boxArticleAdd .CupArticleAdd textarea {
   height: 210px;
   border-radius: 5px;
   resize: none;
-  background-color: #2F5761;
+  background-color: #2f5761;
   color: white;
   margin-bottom: 2vh;
 }
 body section .containerAdd .boxArticleAdd .btn {
-  background-color: #EF86A6;
+  background-color: #ef85a5;
   padding: 0 10px;
   border-radius: 10px;
   margin-top: 2vh;
   border: none;
   font-family: "Pacifico";
   font-size: 25px;
-  color: #2F5761;
+  color: #2f5761;
 }
 
+body .aPropos {
+  margin: 30vh 40vw 30vh 5vh;
+}
 body section .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -176,32 +230,32 @@ body section .container {
   margin: auto;
 }
 body section .container .boxArticle {
-  background-color: #73cfd0b6;
-  width: 300px;
-  height: 370px;
+  background-color: #73cfd0cc;
+  width: 340px;
+  height: 420px;
   text-align: center;
   border-radius: 170px;
 }
 body section .container .boxArticle .nomCupArticle {
-  padding: 4vh 0 0 0;
+  padding: 4vh 0 2vh 0;
 }
 body section .container .boxArticle .imgCupArticle img {
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
 }
 body section .container a {
   text-decoration: none;
-  color: #2F5761;
+  color: #2f5761;
 }
 body section .containerId {
   display: flex;
   justify-content: center;
 }
 body section .containerId .boxArticleId {
-  background-color: #73cfd0b6;
+  background-color: #73cfd0cc;
   margin: auto;
   text-align: center;
   border-radius: 20px;
@@ -217,6 +271,9 @@ body section .containerId .boxArticleId .imgCupArticleId img {
 }
 body section .containerId .boxArticleId .recetteCupArticleId {
   margin-top: 5vh;
+}
+body section .containerId .boxArticleId .recetteCupArticleId p {
+  font-size: 18px;
 }
 body section .containerId .boxArticleId .auteurId {
   margin-top: 10vh;
@@ -258,7 +315,7 @@ body section .containerId .boxArticleId .auteurId {
     justify-content: flex-end;
   }
   body .navbarMobile .bgRoseMobile {
-    background-color: #EF86A6;
+    background-color: #ef85a5;
     border-radius: 100px 0px 0px 100px;
     width: 25vw;
   }
@@ -276,7 +333,7 @@ body section .containerId .boxArticleId .auteurId {
   }
   body .navbarMobile .bgRoseMobile ul li a {
     text-decoration: none;
-    color: #2F5761;
+    color: #2f5761;
   }
   body section .container {
     display: grid;
@@ -290,13 +347,13 @@ body section .retour {
   margin: 10vh 0 0 5vw;
 }
 body section .retour a {
-  color: #2F5761;
+  color: #2f5761;
   font-size: 30px;
 }
 body section h1 {
   font-size: 35px;
   text-align: center;
-  color: #2F5761;
+  color: #2f5761;
 }
 body section .boxReponse {
   display: flex;
@@ -304,7 +361,7 @@ body section .boxReponse {
   justify-content: space-evenly;
 }
 body section .boxReponse .directionsecu {
-  background: #EF86A6;
+  background: #73cfd0cc;
   padding: 15px 50px;
   border-radius: 10px;
   margin-top: 10vh;
@@ -312,7 +369,7 @@ body section .boxReponse .directionsecu {
 body section .boxReponse .directionsecu a {
   font-size: 30px;
   text-decoration: none;
-  color: #2F5761;
+  color: #2f5761;
 }
 body section .boxReponse .directionsecu a i {
   font-size: 20px;
@@ -323,25 +380,29 @@ body section .formCompte {
   margin: 0 30%;
   font-size: 25px;
 }
-body section .formCompte .formG p {
-  margin: 10px 0;
+body section .formCompte .formG {
+  padding: 0 0 3vh 0;
 }
-body section .formCompte .formG .form {
-  background-color: #2F5761;
+body section .formCompte .formG label {
+  font-size: 22px;
+  padding-bottom: 2vh;
+}
+body section .formCompte .formG input {
+  background-color: #2f5761;
   color: white;
-  border-radius: 10px;
   border: none;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 8px 7px;
 }
 body section .formCompte .formG .btn {
-  background-color: #EF86A6;
+  background-color: #ef85a5;
   padding: 0 10px;
   border-radius: 10px;
   margin-top: 2vh;
   border: none;
   font-family: "Pacifico";
   font-size: 25px;
-  color: #2F5761;
+  color: #2f5761;
 }
 
 /*# sourceMappingURL=style.css.map */

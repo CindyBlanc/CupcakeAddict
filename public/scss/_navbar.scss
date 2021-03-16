@@ -66,4 +66,45 @@ body{
     .navbarMobile {
         display: none;
     }
+    footer{
+        background-color: $turquoise;
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-between;
+            padding: 10px;
+            margin: auto;
+            li{
+                list-style: none;
+                padding: 10px 50px;
+                a{
+                    text-decoration: none;
+                    color: $bleu;
+                }
+                a:hover{
+                    color: $rose;
+                }
+
+            }
+            .admin{
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 10%;
+                a{
+                    text-decoration: none;
+                    background-color: $bleu;
+                    padding: 0 10px;
+                    border-radius: 10px;
+                    border: none;
+                    font-family: 'Pacifico';
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+
+        }
+
+    } 
+
 }

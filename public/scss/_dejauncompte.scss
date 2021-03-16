@@ -19,7 +19,7 @@ body{
             flex-direction: row;
             justify-content: space-evenly;
             .directionsecu{
-                background: $rose;
+                background: $turquoise;
                 padding:15px 50px;
                 border-radius: 10px;
                 margin-top: 10vh;
@@ -41,16 +41,17 @@ body{
             margin: 0 30%;
             font-size: 25px;
             .formG{
-                p{
-                    margin: 10px 0;
+                padding: 0 0 3vh 0;
+                label{
+                    font-size: 22px;
+                    padding-bottom: 2vh;
                 }
-                .form{
+                input{
                     background-color: $bleu;
                     color: white;
-                    border-radius: 10px;
                     border: none;
-                    padding: 10px;
-
+                    border-radius: 5px;
+                    padding: 8px 7px;
                 }
                 .btn{
                     background-color: $rose;

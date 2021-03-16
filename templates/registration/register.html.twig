@@ -22,13 +22,12 @@
             <div class="formG">
             {{ form_row(registrationForm.plainPassword, {label: 'Mot de passe '}) }}
             </div>
-            <div class="formG">
-
-            {{ form_row(registrationForm.verificationPassword, {label: 'Vérification du mot de passe '}) }}
-            </div>
 
             <div class="formG">
             {{ form_row(registrationForm.agreeTerms , {label: "J'accepte les termes "}) }}
+            </div>
+
+            <div class="formG">
             <button type="submit" class="btn"> S'inscrire</button>
         {{ form_end(registrationForm) }}
             </div>

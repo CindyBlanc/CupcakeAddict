@@ -17,12 +17,10 @@
         <table>
         <thead>
             <tr>
-                <td colspan="5" class="titreTable" >Mes recettes</td>
+                <td colspan="2" class="titreTable" >Mes recettes</td>
                 <td colspan="3"><a href="{{path('creationCupcake')}}"><i class="fas fa-plus"></i> recette</a></td>
             </tr>
             <tr>
-                <td>id</td>
-                <td>Auteur</td>
                 <td>Image</td>
                 <td>Nom</td>
                 <td colspan="3">Action</td>
@@ -35,8 +33,6 @@
                 {% if (cupcake.auteur) is same as app.user %} 
 
             <tr>
-                <td>{{ cupcake.id }}</td>
-                <td>{{ cupcake.auteur.username }}</td>
                 <td><img src="{{ asset('image/' ~ cupcake.image) }}" alt=""></td>
                 <td>{{ cupcake.nom }}</td>
                 <td>
@@ -51,7 +47,6 @@
                         <input type="hidden" name="_method" value="delete">
                         <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ cupcake.id)}}">
                         <button type="submit"><i class="fas fa-trash-alt"></i></button>
-
                     </form>
                 </td>
             </tr>

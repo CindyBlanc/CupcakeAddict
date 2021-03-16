@@ -1,5 +1,6 @@
 body{
     section{
+        margin-bottom: 30vh;
         .welcome{
             text-align: center;
         }
@@ -10,16 +11,22 @@ body{
                 border-radius: 10px;
                 margin: auto;
                 padding: 24px;
+
                 thead{
                     tr{
                         text-align: center;
                         td {
+                            font-size: 20px;
                             padding-bottom: 8px;
                             border-bottom: 2px dashed pink;
                             a{
                                 color: $rose;
                             }
+                            a:hover {
+                                color: $bleu;
+                            }
                         }
+
                     }
                 }
                 tbody{
@@ -39,10 +46,18 @@ body{
 
                             }
                             button{ 
+                                cursor: pointer;
                                 border: none;
                                 background-color: inherit;
                                 color: $bleu;
                             }
+                            a:hover{
+                                color: $rose;
+                            }
+                            button:hover{
+                                color: $rose;
+                            }
+
                         }
                     }
                 }

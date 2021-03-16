@@ -39,14 +39,6 @@ class Utilisateur implements UserInterface
      */
     private $password;
     
-    /**
-     * @Assert\EqualTo(propertyPath="password", 
-     * message="Vos mots de passe ne correspondent pas")
-     * 
-     */
-    private $verificationPassword;
-
-
 
     /**
      * @ORM\OneToMany(targetEntity=Cupcake::class, mappedBy="auteur")
@@ -110,18 +102,6 @@ class Utilisateur implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
-
-        return $this;
-    }
-
-    public function getVerificationPassword(): ?string
-    {
-        return $this->verificationPassword;
-    }
-
-    public function setVerificationPassword(string $verificationPassword): self
-    {
-        $this->verificationPassword = $verificationPassword;
 
         return $this;
     }

@@ -23,6 +23,9 @@ class CupcakeRepository extends ServiceEntityRepository
     //  * @return Cupcake[] Returns an array of Cupcake objects
     //  */
     /*
+
+
+    
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('c')

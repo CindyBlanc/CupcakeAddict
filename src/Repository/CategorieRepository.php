@@ -19,6 +19,18 @@ class CategorieRepository extends ServiceEntityRepository
         parent::__construct($registry, Categorie::class);
     }
 
+
+    public function getCupcakeParCategorie($categorie)
+    {
+        return $this->createQueryBuilder('a')  
+            ->andWhere('a.categorie > :val') 
+            ->setParameter('val', $categorie)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+
     // /**
     //  * @return Categorie[] Returns an array of Categorie objects
     //  */
@@ -35,6 +47,8 @@ class CategorieRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
 
     /*
     public function findOneBySomeField($value): ?Categorie
