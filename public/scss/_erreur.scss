@@ -1,0 +1,18 @@
+body{
+    .erreur{
+        display:flex;
+        flex-direction: row;
+        margin: 30px;
+        height: 60vh;
+        .img_erreur{
+            img{
+                width: 300px;
+            }
+
+        }
+
+        .text_erreur{
+
+        }
+    }
+}

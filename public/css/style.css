@@ -73,6 +73,9 @@ body .navbarMobile {
 body footer {
   background-color: #73cfd0cc;
   padding: 2px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 body footer p {
   text-align: center;
@@ -286,6 +289,7 @@ body section .containerId .boxArticleId .recette .ingredientCupArticleId {
   padding: 20px 5px;
   text-align: start;
   font-size: 18px;
+  box-shadow: -15px 30px #2f5761;
 }
 body section .containerId .boxArticleId .recette .recetteCupArticleId {
   width: 100%;
@@ -300,6 +304,15 @@ body section .containerId .boxArticleId .auteurId {
   font-size: 20px;
 }
 
+body .erreur {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  height: 60vh;
+}
+body .erreur .img_erreur img {
+  width: 300px;
+}
 @media screen and (max-width: 1203px) {
   body .navbarDesktop .nom {
     font-size: 40px;

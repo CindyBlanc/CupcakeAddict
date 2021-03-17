@@ -69,6 +69,9 @@ body{
     footer{
         background-color: $turquoise;
         padding: 2px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
         p{
             text-align: center;
             a{

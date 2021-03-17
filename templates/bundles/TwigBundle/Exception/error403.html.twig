@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Page non trouvé{% endblock %}
+
+{% block body %}
+<h1>Accès refusé</h1>
+<p>Code de l'erreur : {{ status_code }}</p>
+<p>Message de l'erreur : {{ status_text }}</p>
+
+<img src="{{ asset('image/cupcake_404.jpg') }}" alt="">
+
+{% endblock %}
