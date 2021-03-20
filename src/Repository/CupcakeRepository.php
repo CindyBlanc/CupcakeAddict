@@ -19,6 +19,17 @@ class CupcakeRepository extends ServiceEntityRepository
         parent::__construct($registry, Cupcake::class);
     }
 
+
+    public function getCupcakeParCategorie($categorie)
+    {
+        return $this->createQueryBuilder('c')  
+            ->andWhere('c.categorie = :val') 
+            ->setParameter('val', $categorie)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
     // /**
     //  * @return Cupcake[] Returns an array of Cupcake objects
     //  */

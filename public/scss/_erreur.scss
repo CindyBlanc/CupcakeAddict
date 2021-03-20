@@ -4,15 +4,17 @@ body{
         flex-direction: row;
         margin: 30px;
         height: 60vh;
+        width: 90%;
         .img_erreur{
+            width: 50%;
+            text-align: center;
             img{
-                width: 300px;
+                width: 400px;
             }
-
         }
 
         .text_erreur{
-
-        }
+            width: 50%;
+            text-align: center;        }
     }
 }

@@ -44,25 +44,34 @@ body .navbarDesktop .navbar {
 }
 body .navbarDesktop .navbar .bgRose {
   background-color: #ef85a5;
-  height: 60px;
+  padding: 10px;
   border-radius: 100px 0px 0px 100px;
   margin-top: 60px;
   margin-left: 5vw;
+  border: 2px solid transparent;
+  width: 85%;
+}
+body .navbarDesktop .navbar .bgRose:hover {
+  border: 2px dashed #2f5761ad;
+  transition: 2s;
 }
 body .navbarDesktop .navbar .bgRose ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
-  margin-right: 2vw;
+  margin: auto;
 }
 body .navbarDesktop .navbar .bgRose ul li {
   font-size: 22px;
-  margin-top: 12px;
 }
 body .navbarDesktop .navbar .bgRose ul li a {
   text-decoration: none;
   color: #2f5761;
+}
+body .navbarDesktop .navbar .bgRose ul li a:hover {
+  color: #73cfd0;
+  transition: 2s;
 }
 body .enteteMobile {
   display: none;
@@ -77,14 +86,52 @@ body footer {
   bottom: 0;
   width: 100%;
 }
-body footer p {
-  text-align: center;
+body footer .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10vw;
 }
-body footer p a {
+body footer .info .partenaire ul {
+  list-style-type: none;
+}
+body footer .info .partenaire ul li a {
   text-decoration: none;
   color: #2f5761;
 }
-body footer p a:hover {
+body footer .info .partenaire ul li a:hover {
+  color: #ef85a5;
+}
+body footer .info .partenaire ul li a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+body footer .info .droit {
+  margin-top: auto;
+}
+body footer .info .droit p {
+  text-align: center;
+}
+body footer .info .droit p a {
+  text-decoration: none;
+  color: #2f5761;
+}
+body footer .info .droit p a:hover {
+  color: #ef85a5;
+}
+body footer .info .rso ul {
+  list-style: none;
+  display: flex;
+}
+body footer .info .rso ul li {
+  margin-right: 10px;
+  font-size: 30px;
+}
+body footer .info .rso ul li a {
+  text-decoration: none;
+  color: #2f5761;
+}
+body footer .info .rso ul li a:hover {
   color: #ef85a5;
 }
 
@@ -95,13 +142,23 @@ body section .welcome {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 3vh;
 }
-body section .welcome a {
+body section .welcome .adminBtn {
+  margin: auto;
+  padding: 5px 10px;
+  border: 3px solid transparent;
+  font-size: 17px;
+  background-color: #ef85a510;
+}
+body section .welcome .adminBtn a {
   text-decoration: none;
   color: #2f5761;
 }
-body section .welcome a:hover {
-  color: #ef85a5;
+body section .welcome .adminBtn:hover {
+  transition: 1s;
+  border-top: 3px dashed #ef85a5;
+  border-bottom: 3px dashed #ef85a5;
 }
 body section .compteBox {
   margin: auto;
@@ -110,7 +167,7 @@ body section .compteBox table {
   background-color: #73cfd0cc;
   border-radius: 10px;
   margin: auto;
-  padding: 24px;
+  padding: 14px;
 }
 body section .compteBox table thead tr {
   text-align: center;
@@ -118,7 +175,7 @@ body section .compteBox table thead tr {
 body section .compteBox table thead tr td {
   font-size: 20px;
   padding-bottom: 8px;
-  border-bottom: 2px dashed pink;
+  border-bottom: 2px dashed #ef85a5;
 }
 body section .compteBox table thead tr td a {
   color: #ef85a5;
@@ -128,7 +185,7 @@ body section .compteBox table thead tr td a:hover {
 }
 body section .compteBox table tbody tr td {
   padding: 8px;
-  border-bottom: 2px dashed pink;
+  border-bottom: 2px dashed #ef85a5;
 }
 body section .compteBox table tbody tr td img {
   width: 100px;
@@ -140,17 +197,21 @@ body section .compteBox table tbody tr td img {
 body section .compteBox table tbody tr td a {
   color: #2f5761;
 }
+body section .compteBox table tbody tr td a:hover {
+  color: #ef85a5;
+}
 body section .compteBox table tbody tr td button {
   cursor: pointer;
   border: none;
   background-color: inherit;
   color: #2f5761;
 }
-body section .compteBox table tbody tr td a:hover {
-  color: #ef85a5;
-}
 body section .compteBox table tbody tr td button:hover {
   color: #ef85a5;
+}
+body section .compteBox table tbody tr:hover {
+  background-color: #ef85a550;
+  transition: 0.5s;
 }
 
 body section .containerAdd {
@@ -202,22 +263,54 @@ body section .containerAdd .boxArticleAdd .CupArticleAdd textarea {
 }
 body section .containerAdd .boxArticleAdd .btn {
   background-color: #ef85a5;
-  border: 2px solid #ef85a5;
   padding: 0 10px;
   border-radius: 10px;
   margin-top: 2vh;
+  border: 2px solid #ef85a5;
   font-family: "Pacifico";
   font-size: 25px;
   color: #2f5761;
-  cursor: pointer;
+  box-shadow: 20px 38px 34px -16px rgba(0, 0, 0, 0.2);
 }
 body section .containerAdd .boxArticleAdd .btn:hover {
-  background-color: #73cfd0cc;
   transition: 1s;
+  box-shadow: 9px 9px 10px -3px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 body .aPropos {
   margin: 30vh 40vw 30vh 5vh;
+}
+body section h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+body section h1 a:hover {
+  color: #ef85a5;
+  transition: 2s;
+}
+body section .filtre {
+  text-align: center;
+  background-color: #ef85a50a;
+  padding: 20px;
+  margin: 0px 20vw 10vh;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+body section .filtre a {
+  text-decoration: none;
+  color: #2f5761;
+  margin-right: 2vw;
+  border: 2px solid transparent;
+}
+body section .filtre a:hover {
+  border-top: 2px solid #ef85a5;
+  border-bottom: 2px solid #ef85a5;
+  transition: 0.4s;
+}
+body section .filtre:hover {
+  border: 2px dashed #ef85a563;
+  transition: 1s;
 }
 body section .container {
   display: grid;
@@ -232,6 +325,8 @@ body section .container .boxArticle {
   height: 420px;
   text-align: center;
   border-radius: 170px;
+  border: 2px solid transparent;
+  box-shadow: 20px 38px 34px -16px rgba(0, 0, 0, 0.2);
 }
 body section .container .boxArticle .nomCupArticle {
   padding: 4vh 0 2vh 0;
@@ -242,16 +337,11 @@ body section .container .boxArticle .imgCupArticle img {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  box-shadow: 15px -15px 30px #2f5761;
-}
-body section .container .boxArticle .imgCupArticle img:hover {
-  width: 250px;
-  height: 250px;
-  transition: width 1s, height 1s;
 }
 body section .container .boxArticle:hover {
-  box-shadow: 10px -10px 50px #2f5761;
-  transition: 2s;
+  box-shadow: 9px 9px 10px -3px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  border: 2px dashed #2f57615e;
 }
 body section .container a {
   text-decoration: none;
@@ -268,6 +358,7 @@ body section .containerId .boxArticleId {
   border-radius: 20px;
   padding: 0 2vw;
   width: 70%;
+  box-shadow: 10px 10px 10px #2f5761;
 }
 body section .containerId .boxArticleId .nomCupArticleId {
   padding: 4vh 0 3vh 0;
@@ -289,7 +380,20 @@ body section .containerId .boxArticleId .recette .ingredientCupArticleId {
   padding: 20px 5px;
   text-align: start;
   font-size: 18px;
-  box-shadow: -15px 30px #2f5761;
+  box-shadow: 10px 10px 10px #2f5761;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body section .containerId .boxArticleId .recette .ingredientCupArticleId .editSiUser {
+  text-align: center;
+}
+body section .containerId .boxArticleId .recette .ingredientCupArticleId .editSiUser a {
+  color: #2f5761;
+  text-decoration: none;
+}
+body section .containerId .boxArticleId .recette .ingredientCupArticleId .editSiUser a:hover {
+  color: #ef85a5;
 }
 body section .containerId .boxArticleId .recette .recetteCupArticleId {
   width: 100%;
@@ -299,9 +403,16 @@ body section .containerId .boxArticleId .recette .recetteCupArticleId p {
   font-size: 20px;
 }
 body section .containerId .boxArticleId .auteurId {
-  margin-top: 10vh;
+  margin: 10vh;
   text-align: end;
   font-size: 20px;
+}
+body section .containerId .boxArticleId .auteurId a {
+  color: #2f5761;
+  text-decoration: none;
+}
+body section .containerId .boxArticleId .auteurId a:hover {
+  color: #ef85a5;
 }
 
 body .erreur {
@@ -309,10 +420,20 @@ body .erreur {
   flex-direction: row;
   margin: 30px;
   height: 60vh;
+  width: 90%;
+}
+body .erreur .img_erreur {
+  width: 50%;
+  text-align: center;
 }
 body .erreur .img_erreur img {
-  width: 300px;
+  width: 400px;
 }
+body .erreur .text_erreur {
+  width: 50%;
+  text-align: center;
+}
+
 @media screen and (max-width: 1203px) {
   body .navbarDesktop .nom {
     font-size: 40px;
@@ -350,7 +471,7 @@ body .erreur .img_erreur img {
   body .navbarMobile .bgRoseMobile {
     background-color: #ef85a5;
     border-radius: 100px 0px 0px 100px;
-    width: 25vw;
+    width: 30vw;
   }
   body .navbarMobile .bgRoseMobile ul {
     display: flex;
@@ -386,6 +507,37 @@ body .erreur .img_erreur img {
   }
   body section .containerId .boxArticleId .recette .recetteCupArticleId {
     width: inherit;
+  }
+  body .erreur {
+    flex-direction: column;
+  }
+  body .erreur .img_erreur {
+    width: inherit;
+  }
+  body .erreur .img_erreur img {
+    filter: opacity(0.5);
+  }
+  body .erreur .text_erreur {
+    width: inherit;
+    position: absolute;
+  }
+  body footer .info {
+    flex-direction: column;
+    text-align: center;
+  }
+  body footer .info .partenaire ul {
+    list-style: none;
+    padding: initial;
+  }
+  body footer .info .droit {
+    position: absolute;
+    bottom: 0;
+    margin-top: auto;
+  }
+  body footer .info .rso ul {
+    padding: inherit;
+    justify-content: center;
+    margin-bottom: 10vh;
   }
 }
 body section .retour {
@@ -442,6 +594,7 @@ body section .boxReponse .directionsecu:hover::before, body section .boxReponse 
   border-radius: 75px;
   z-index: -1;
   animation: 1s clockwise infinite;
+  filter: opacity(0.7);
 }
 body section .boxReponse div:hover:after {
   background: #73cfd0cc;
@@ -552,10 +705,12 @@ body section .formCompte .formG .btn {
   font-family: "Pacifico";
   font-size: 25px;
   color: #2f5761;
+  box-shadow: 20px 38px 34px -16px rgba(0, 0, 0, 0.2);
 }
 body section .formCompte .formG .btn:hover {
-  background-color: #73cfd0cc;
   transition: 1s;
+  box-shadow: 9px 9px 10px -3px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

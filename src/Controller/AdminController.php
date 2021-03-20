@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Cupcake;
 use App\Form\CupcakeType;
+use App\Entity\Utilisateur;
 use App\Repository\CupcakeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -76,5 +77,7 @@ class AdminController extends AbstractController
                     $this->addFlash("success", "La suppression a été effectuée");
                     return $this->redirectToRoute("user");
                 }    
-    }
+            }
+
+
 }

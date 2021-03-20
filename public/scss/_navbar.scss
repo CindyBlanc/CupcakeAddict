@@ -38,22 +38,31 @@ body{
             width: 40%;
             .bgRose{
                 background-color: $rose;
-                height: 60px;
+                padding: 10px;
                 border-radius: 100px 0px 0px 100px;
                 margin-top: 60px;
                 margin-left: 5vw;
+                border: 2px solid transparent;
+                width: 85%;
+                &:hover{
+                    border: 2px dashed #2f5761ad;
+                    transition: 2s;
+                }
                 ul{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-evenly;
                     list-style: none;
-                    margin-right: 2vw;
+                    margin: auto;
                     li{
                         font-size: 22px;
-                        margin-top: 12px;
                         a{
                             text-decoration: none;
                             color: $bleu;
+                            &:hover{
+                                color: #73cfd0;
+                                transition: 2s;
+                            }
                         }
                     }
                 }
@@ -72,16 +81,65 @@ body{
         position: relative;
         bottom: 0;
         width: 100%;
-        p{
-            text-align: center;
-            a{
-                text-decoration: none;
-                color: $bleu;
+        .info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 10vw;
+            .partenaire{
+                ul{
+                    list-style-type: none;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: $bleu;
+                            &:hover{
+                                color: $rose;
+                            }
+                            i{
+                                font-size: 20px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+
             }
-            a:hover {
-                color: $rose;
+            .droit{
+                margin-top: auto;
+                p{
+                    text-align: center;
+                    a{
+                        text-decoration: none;
+                        color: $bleu;
+                        &:hover{
+                            color: $rose;
+                        }
+                    }
+                }
+    
             }
+            .rso{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    li{
+                        margin-right: 10px;
+                        font-size: 30px;
+                        a{
+                            text-decoration: none;
+                            color: $bleu;
+                            &:hover{
+                                color: $rose;
+                            }
+
+                        }
+                    }
+                }
+            }
+
         }
+
     } 
 
 }

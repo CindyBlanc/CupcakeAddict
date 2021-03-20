@@ -60,7 +60,7 @@
             .bgRoseMobile{
                 background-color: $rose;
                 border-radius: 100px 0px 0px 100px;
-                width: 25vw;
+                width: 30vw;
                 ul{
                     display: flex;
                     flex-direction: row;
@@ -106,6 +106,45 @@
                             width: inherit;
                         }
                     }
+                }
+            }
+        }
+        .erreur{
+            flex-direction: column;
+            .img_erreur{
+                width:inherit;
+                img{
+                    filter: opacity(0.5);
+                }
+            }
+            .text_erreur{
+                width:inherit;
+                position: absolute;
+            }
+        }
+
+        footer{
+            .info{
+                flex-direction: column;
+                text-align: center;
+                .partenaire{
+                    ul {
+                        list-style: none;
+                        padding: initial;
+                    }
+                }
+                .droit{
+                    position: absolute;
+                    bottom: 0;
+                    margin-top: auto;
+                }
+                .rso{
+                    ul{
+                        padding: inherit;
+                        justify-content: center;
+                        margin-bottom: 10vh;
+                    }
+
                 }
             }
         }

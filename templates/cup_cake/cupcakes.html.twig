@@ -7,11 +7,15 @@
         <div class="retour">
             <a href="{{path('accueil')}}"><i class="fas fa-reply"></i></a>
         </div>
-        <h1>Les Cupcakes</h1>
+        <h1><a href="{{path('cupcakes')}}"> Les Cupcakes</a></h1>
+
 
 
         <div class="filtre">
-
+        <a href=""></a>
+            {% for categorie in categories %}
+        <a href="{{ path("filtreCategorie", {'categorie': categorie.id }) }}"> {{ categorie.nomCat }}</a>
+            {% endfor %}
         </div>
 
         <div class="container">

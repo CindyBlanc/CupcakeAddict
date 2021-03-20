@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\CupcakeRepository;
+use App\Repository\CategorieRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,12 +23,13 @@ class CupCakeController extends AbstractController
     /**
      * @Route("/lescupcakes", name="cupcakes")
      */
-    public function cupcake(CupcakeRepository $repository): Response
+    public function cupcake(CupcakeRepository $repository, CategorieRepository $repositoryCat): Response
     {
         $cupcakes = $repository->findAll();
+        $categories = $repositoryCat->findAll();
         return $this->render('cup_cake/cupcakes.html.twig', [
             'cupcakes'=>$cupcakes,
-
+            'categories'=>$categories,
             ]);
     }
 
@@ -43,7 +45,7 @@ class CupCakeController extends AbstractController
 
     }
 
-    
+
     /**
      * @Route("/dejauncompte", name="dejauncompte")
      */
@@ -54,5 +56,20 @@ class CupCakeController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/cup_cake/{categorie}", name="filtreCategorie")
+     */
+    public function filtreDeCategorie(CupcakeRepository $repository, $categorie, CategorieRepository $repositoryCat): Response
+    {
+        $cupcakes = $repository->getCupcakeParCategorie($categorie);
+        $categories = $repositoryCat->findAll();
+        return $this->render('cup_cake/cupcakes.html.twig', [
+            'cupcakes'=>$cupcakes,
+            'categories'=>$categories,
+            'isCategorie'=>true,
+        ]);
+        
+    }
 
+    
 }

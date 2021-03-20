@@ -10,12 +10,15 @@
 
     <div class="welcome">
            <h2>Bienvenu {{ app.user.username }}</h2> 
-                       {% if is_granted('ROLE_ADMIN') %}
+
+           <div class="adminBtn">
+            {% if is_granted('ROLE_ADMIN') %}
             <a href="{{path('admin')}}" class="admin"> Admin </a>
-        {% endif %}
+            {% endif %}   
+                   
+           </div>
+
     </div>
-
-
 
     <div class="compteBox">
 

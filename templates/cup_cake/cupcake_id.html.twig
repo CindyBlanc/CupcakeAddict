@@ -17,17 +17,27 @@
                     <img src="{{ asset('image/' ~ cupcake.image) }}" alt="">
                 </div>
                 <div class="recette">
-                <div class="ingredientCupArticleId">
-                <p>{{ cupcake.ingredient | nl2br }}</p>
-                </div>
-                <div class="recetteCupArticleId">
+                    <div class="ingredientCupArticleId">
+                        <div class="ingredient">
+                                        <p>{{ cupcake.ingredient | nl2br }}</p>
 
-                <p>{{ cupcake.recette | nl2br }}</p>
+                        </div>
+                        <div class="editSiUser">
+                                    {% if (cupcake.auteur) is same as app.user %} 
+                        <a href="{{path('modificationCupcake',{'id' : cupcake.id})}}">Editer ma recette</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="recetteCupArticleId">
+
+                    <p>{{ cupcake.recette | nl2br }}</p>
+                    </div>
                 </div>
-                </div>
-     
-                <div class="auteurId">
+
+                <div class="auteurId">  
+
                 <p>Recette de {{ cupcake.auteur.username }}</p>
+
                 </div>
             </div>
         </div>

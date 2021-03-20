@@ -56,6 +56,7 @@ body{
                 border-radius: 75px;
                 z-index: -1;
                 animation: 1s clockwise infinite;
+                filter: opacity(0.7);
             }
                   
             div:hover:after {
@@ -168,10 +169,13 @@ body{
                     font-family: 'Pacifico';
                     font-size: 25px;
                     color: $bleu;
+                    box-shadow: 20px 38px 34px -16px hsla(0,0%,0%,.2);
                 }
                 .btn:hover{
-                    background-color: $turquoise;
                     transition: 1s;
+                    box-shadow:9px 9px 10px -3px rgb(0 0 0 / 30%);
+                    color: white;
+
                 }
 
             }

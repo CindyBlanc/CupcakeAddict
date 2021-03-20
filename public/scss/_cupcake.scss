@@ -1,9 +1,49 @@
 body{
     .aPropos{
         margin: 30vh 40vw 30vh 5vh;
-    }
 
+
+    }
+    
     section{
+
+        h1{
+            a{
+                text-decoration: none;
+                color: inherit;
+                &:hover{
+                    color: #ef85a5;
+                    transition: 2s;
+                }
+            }
+
+        }
+        .filtre{
+            text-align: center;
+            background-color: #ef85a50a;
+            padding: 20px;
+            margin: 0px 20vw 10vh;     
+            border-radius: 10px;     
+            border: 2px solid transparent;
+  
+            a{
+                text-decoration: none;
+                color: $bleu;
+                margin-right: 2vw;
+                border: 2px solid transparent;
+            }
+            a:hover{
+                border-top: 2px solid $rose;
+                border-bottom: 2px solid $rose;
+                transition: .4s;
+
+            }
+            
+        }
+        .filtre:hover{
+            border: 2px dashed #ef85a563;
+            transition: 1s;
+        }
         .container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -16,6 +56,9 @@ body{
                 height: 420px;
                 text-align: center;
                 border-radius: 170px;
+                border: 2px solid transparent;
+                box-shadow: 20px 38px 34px -16px hsla(0,0%,0%,.2);
+
                 .nomCupArticle{
                     padding: 4vh 0 2vh 0;
     
@@ -27,19 +70,15 @@ body{
                         border-radius: 50%;
                         object-fit: cover;
                         object-position: center;
-                        box-shadow: 15px -15px 30px #2f5761;
                     }
-                    img:hover{
-                        width: 250px;
-                        height: 250px;
-                        transition: width 1s, height 1s;
-                    }
+
                 }
             }
             .boxArticle:hover{
-                box-shadow: 10px -10px 50px #2f5761;
-                transition: 2s;
-    
+                box-shadow:9px 9px 10px -3px rgb(0 0 0 / 30%);
+                transition: 0.5s;
+                border: 2px dashed #2f57615e;
+
             }
             a{
                 text-decoration: none;
@@ -58,6 +97,7 @@ body{
                 border-radius: 20px;
                 padding: 0 2vw;
                 width: 70%;
+                box-shadow: 10px 10px 10px #2f5761;
                 .nomCupArticleId {
                     padding: 4vh 0 3vh 0;
     
@@ -80,8 +120,20 @@ body{
                         padding: 20px 5px;      
                         text-align: start;
                         font-size: 18px;
-                        box-shadow: -15px 30px #2f5761
-
+                        box-shadow: 10px 10px 10px #2f5761;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .editSiUser{
+                            text-align: center;
+                            a{
+                                color: $bleu;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $rose;
+                                }
+                            }
+                        }
                     }
                     .recetteCupArticleId{
                         width: 100%;
@@ -94,10 +146,18 @@ body{
                 }
 
                 .auteurId{
-                    margin-top: 10vh;
+                    margin: 10vh;
                     text-align: end;
                     font-size: 20px;
+                    a{
+                        color: $bleu;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: $rose;
+                    }
                 }
+
             }
     
         }

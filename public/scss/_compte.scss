@@ -5,13 +5,26 @@ body{
             display: flex;
             flex-direction: column;
             text-align: center;
-            a{
-                text-decoration: none;
-                color: $bleu;
+            margin-bottom: 3vh;
+            .adminBtn{
+                margin: auto;
+                padding: 5px 10px;
+                border: 3px solid transparent;
+                font-size: 17px;
+                background-color: #ef85a510;
+
+                a{
+                    text-decoration: none;
+                    color: $bleu;
+                }
+                &:hover{
+                    transition: 1s;
+                    border-top: 3px dashed $rose;
+                    border-bottom: 3px dashed $rose;
+                }
+
             }
-            a:hover{
-                color: $rose;
-            }
+
         }
         .compteBox{
             margin: auto;
@@ -19,7 +32,7 @@ body{
                 background-color: $turquoise;
                 border-radius: 10px;
                 margin: auto;
-                padding: 24px;
+                padding: 14px;
 
                 thead{
                     tr{
@@ -27,7 +40,7 @@ body{
                         td {
                             font-size: 20px;
                             padding-bottom: 8px;
-                            border-bottom: 2px dashed pink;
+                            border-bottom: 2px dashed $rose;
                             a{
                                 color: $rose;
                             }
@@ -42,7 +55,7 @@ body{
                     tr{
                         td{
                             padding: 8px;
-                            border-bottom: 2px dashed pink;
+                            border-bottom: 2px dashed $rose;
                             img{
                                 width:100px; 
                                 width: 100px;
@@ -52,7 +65,9 @@ body{
                             }
                             a{
                                 color: $bleu;
-
+                            }
+                            a:hover{
+                                color: $rose;
                             }
                             button{ 
                                 cursor: pointer;
@@ -60,14 +75,15 @@ body{
                                 background-color: inherit;
                                 color: $bleu;
                             }
-                            a:hover{
-                                color: $rose;
-                            }
                             button:hover{
                                 color: $rose;
                             }
 
                         }
+                    }
+                    tr:hover{
+                        background-color: #ef85a550;
+                        transition: 0.5s;
                     }
                 }
             }
