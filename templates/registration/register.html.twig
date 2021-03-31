@@ -14,17 +14,31 @@
         
             <div class="formCompte">
             {{ form_start(registrationForm) }}
-
-            <div class="formG">
-                    {{ form_row(registrationForm.username, {label: 'Identifiant '}) }}
-                    
-            </div>
-            <div class="formG">
-            {{ form_row(registrationForm.plainPassword, {label: 'Mot de passe '}) }}
+            <div class="erreurRegister">
+                                {{ form_errors(registrationForm.username) }}
+                                {{ form_errors(registrationForm.password) }}
+                                {{ form_errors(registrationForm.verificationPassword) }}
+           
             </div>
 
+
+
+
             <div class="formG">
-            {{ form_row(registrationForm.agreeTerms , {label: "J'accepte les termes "}) }}
+                    {{ form_label(registrationForm.username, 'Identifiant') }}
+                    {{ form_widget(registrationForm.username) }}
+            </div>
+            <div class="formG">
+                    {{ form_label(registrationForm.password, 'Mot de passe ') }}
+                    {{ form_widget(registrationForm.password) }}
+      
+            </div>
+            <div class="formG">
+                    {{ form_label(registrationForm.verificationPassword, 'Verification de mot de passe ') }}
+                    {{ form_widget(registrationForm.verificationPassword) }}            
+            </div>
+            <div class="formGterme">
+            {{ form_row(registrationForm.agreeTerms , {label: "J'aime les Cupcakes "}) }}
             </div>
 
             <div class="formG">

@@ -2,9 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=false">
         <title>{% block title %}Welcome!{% endblock %}</title>
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/favicon-16x16.png') }}">
         {% block stylesheets %}
         {% endblock %}
         {% block javascripts %}
@@ -69,9 +71,9 @@
             <div class="partenaire">
             <h3>Nos partenaires : </h3>
             <ul>
-                <li><a href="#"><i class="fas fa-utensils"></i>Site de Flo</a></li>
-                <li><a href="#"><i class="fas fa-home"></i>Site de Phiphi</a></li>
-                <li><a href="#"><i class="fas fa-cocktail"></i>Site de Couliga</a></li>
+                <li><a href="https://epcf2.floriansaintlezer.fr/" target="_blank"><i class="fas fa-utensils"></i>Food and Go</a></li>
+                <li><a href="https://agence-code.philippe-nguyen.com/" target="_blank"><i class="fas fa-home"></i>Agence Code</a></li>
+                <li><a href="http://keurndox.keurndox.com/"><i class="fas fa-cocktail" target="_blank"></i>Keur N Dox</a></li>
             </ul>
             </div>
             <div class="droit">
@@ -87,9 +89,11 @@
             </div>
         </div>
 
-    
-
         </footer>
+
+        	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+			<script type="text/javascript" src="/js/script.js"></script>
+
 
     </body>
 </html>

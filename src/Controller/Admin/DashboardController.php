@@ -30,16 +30,17 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Cupcake Addict');
+            ->setTitle('<img src="./image/Logo_Admin.png" style="width: 100px">');
     }
 
     public function configureMenuItems(): iterable
     {
+        
         yield MenuItem::section('Important');
         yield MenuItem::linktoRoute('Mon site', 'fa fa-home', 'user');
-        yield MenuItem::linktoCrud('Recette', 'fa fa-file', Cupcake::class);
+        yield MenuItem::linktoCrud('Recette', 'fas fa-pie', Cupcake::class);
         yield MenuItem::linktoCrud('Catégorie', 'fa fa-file', Categorie::class);
-        yield MenuItem::linktoCrud('Utilisateur', 'fa fa-file', Utilisateur::class);
+        yield MenuItem::linktoCrud('Utilisateur', 'fas fa-users', Utilisateur::class);
 
 
     }

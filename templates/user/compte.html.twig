@@ -6,64 +6,91 @@
 
     <section>
 
-    <h1>Mon compte</h1>
+        <h1>Mon compte</h1>
 
-    <div class="welcome">
-           <h2>Bienvenu {{ app.user.username }}</h2> 
+        <div class="welcome">
+            <h2>Bienvenue {{ app.user.username }}</h2> 
+                
+                {% if is_granted('ROLE_ADMIN') %}
+            <div class="adminBtn">
+                <a href="{{path('admin')}}" class="admin"> Admin </a>                  
+            </div>
+                {% endif %}   
 
-           <div class="adminBtn">
-            {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{path('admin')}}" class="admin"> Admin </a>
-            {% endif %}   
-                   
-           </div>
+        </div>
+            {% for message in app.flashes('success') %}
+            <div class="messageAlert"> {{message}} </div>
+            {% endfor %}
+        <div class="compteBox">
 
-    </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2" class="titreTable" >Mes recettes</td>
+                        <td colspan="3"><a href="{{path('creationCupcake')}}"><i class="fas fa-plus"></i> recette</a></td>
+                    </tr>
+                    <tr>
+                        <td>Image</td>
+                        <td>Nom</td>
+                        <td colspan="3">Action</td>
+                    </tr>
+                </thead>
+                <tbody>
 
-    <div class="compteBox">
+                
+                        {% for cupcake in cupcakes %}
+                        {% if (cupcake.auteur) is same as app.user %} 
 
-        <table>
-        <thead>
-            <tr>
-                <td colspan="2" class="titreTable" >Mes recettes</td>
-                <td colspan="3"><a href="{{path('creationCupcake')}}"><i class="fas fa-plus"></i> recette</a></td>
-            </tr>
-            <tr>
-                <td>Image</td>
-                <td>Nom</td>
-                <td colspan="3">Action</td>
-            </tr>
-        </thead>
-        <tbody>
+                    <tr>
+                        <td><img src="{{ asset('image/' ~ cupcake.image) }}" alt=""></td>
+                        <td>{{ cupcake.nom }}</td>
+                        <td>
+                            <a href="{{path('cupcake_id',{'id' : cupcake.id})}}"><i class="fas fa-eye"></i></a>
+                        </td>
+
+                        <td>
+                            <a href="{{path('modificationCupcake',{'id' : cupcake.id})}}"><i class="fas fa-exchange-alt"></i></a>
+                        </td>
+                        <td>
+                            <form method="POST" action="{{path('supprimerCupcake',{'id' : cupcake.id})}}">
+                                <input type="hidden" name="_method" value="delete">
+                                <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ cupcake.id)}}">
+                                <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
         
-                {% for cupcake in cupcakes %}
-                {% if (cupcake.auteur) is same as app.user %} 
+        <div class="compteMobile">
+            <div class="ajouterMobile">
+                <a href="{{path('creationCupcake')}}"><i class="fas fa-plus"></i> recette</a>
+            </div>
 
-            <tr>
-                <td><img src="{{ asset('image/' ~ cupcake.image) }}" alt=""></td>
-                <td>{{ cupcake.nom }}</td>
-                <td>
-                    <a href="{{path('cupcake_id',{'id' : cupcake.id})}}"><i class="fas fa-eye"></i></a>
-                </td>
+        
+            {% for cupcake in cupcakes %}
+            {% if (cupcake.auteur) is same as app.user %} 
+            <div class="compteMobileId">
 
-                <td>
+                <h3>{{ cupcake.nom }}</h3>
+                <a href="{{path('cupcake_id',{'id' : cupcake.id})}}"><img src="{{ asset('image/' ~ cupcake.image) }}" alt=""></a>
+                <br>
+                <div class="actionMobile">
                     <a href="{{path('modificationCupcake',{'id' : cupcake.id})}}"><i class="fas fa-exchange-alt"></i></a>
-                </td>
-                <td>
                     <form method="POST" action="{{path('supprimerCupcake',{'id' : cupcake.id})}}">
                         <input type="hidden" name="_method" value="delete">
                         <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ cupcake.id)}}">
                         <button type="submit"><i class="fas fa-trash-alt"></i></button>
                     </form>
-                </td>
-            </tr>
-        {% endif %}
-        {% endfor %}
-        </tbody>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
 
-        </table>
-
-    
     </section>
 {% endblock %}

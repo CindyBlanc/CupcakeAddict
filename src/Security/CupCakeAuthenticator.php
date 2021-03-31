@@ -71,7 +71,7 @@ class CupCakeAuthenticator extends AbstractFormLoginAuthenticator implements Pas
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Username could not be found.');
+            throw new CustomUserMessageAuthenticationException('Cet identifiant n\'est pas reconnu.');
         }
 
         return $user;

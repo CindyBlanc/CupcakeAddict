@@ -27,6 +27,7 @@ class CupcakeRepository extends ServiceEntityRepository
             ->setParameter('val', $categorie)
             ->getQuery()
             ->getResult()
+            
         ;
     }
 

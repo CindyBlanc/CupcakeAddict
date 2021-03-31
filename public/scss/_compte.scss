@@ -26,8 +26,14 @@ body{
             }
 
         }
+        .messageAlert { 
+            color: green;
+            text-align: center;
+            padding: 40px 0;
+        }
         .compteBox{
             margin: auto;
+
             table{
                 background-color: $turquoise;
                 border-radius: 10px;
@@ -57,7 +63,6 @@ body{
                             padding: 8px;
                             border-bottom: 2px dashed $rose;
                             img{
-                                width:100px; 
                                 width: 100px;
                                 height: 100px; 
                                 object-fit: cover;
@@ -88,6 +93,56 @@ body{
                 }
             }
         }
-    }
+        .compteMobile{
+            display: none;
+            width: 90%;
+            margin: auto;
+            background-color: $turquoise;
+            text-align: center;
+            border-radius: 10px;
+            padding: 2vh 0 5vh 0;
+            .ajouterMobile{
+                border-bottom: 2px dashed $rose;
+                padding-bottom: 2vh;
+                font-size: 22px;
+                a{
+                    color: $rose;
+                    &:hover {
+                        color: $bleu;
+                } 
+                }
 
+            }
+            .compteMobileId{
+                border-bottom: 2px dashed $rose;
+                padding-bottom: 2vh;
+                img{
+                    width: 100px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                .actionMobile{
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    a{
+                        padding-right: 30px;
+                        color: $bleu;
+                        &:hover{
+                            color: $rose;
+                        }
+                    }
+                    button{ 
+                        cursor: pointer;
+                        border: none;
+                        background-color: inherit;
+                        color: $bleu;
+                        &:hover{
+                            color: $rose;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

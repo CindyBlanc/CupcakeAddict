@@ -18,6 +18,22 @@
             {% endfor %}
         </div>
 
+        <div class="filtreMobile">
+            <label for="categorie-select">Par Catégorie</label>
+            <select name="categorie" class="categorie-select" onchange="location = this.value;">
+                <option value="">--Filtrer par catégorie--</option>
+                <option value="/lescupcakes">Toutes les catégories</option>
+				<option value="/cup_cake/1">Anniversaire</option>
+                <option value="/cup_cake/2">Halloween</option>
+                <option value="/cup_cake/3">Baby Shower</option>
+                <option value="/cup_cake/4">Saint Valentin</option>
+                <option value="/cup_cake/5">Noël</option>
+                <option value="/cup_cake/7">Pâques</option>
+                <option value="/cup_cake/6">Divers</option>
+            </select>
+                    
+        </div>
+
         <div class="container">
         
         {% for cupcake in cupcakes %}
@@ -25,7 +41,7 @@
         <a href="{{path('cupcake_id', {'id' : cupcake.id})}}">
             <div class="boxArticle">
                 <div class="nomCupArticle">
-                    <h2>{{ cupcake.nom }}</h2>
+                    <h3>{{ cupcake.nom }}</h3>
                 </div>
                 <div class="imgCupArticle">
                     <img src="{{ asset('image/' ~ cupcake.image) }}" alt="">
@@ -34,9 +50,6 @@
         </a>
 
         {% endfor %}
-
-
-
         </div>
 
 

@@ -27,7 +27,7 @@ class AdminController extends AbstractController
      */
     public function index(CupcakeRepository $repository): Response
     {
-        $cupcakes =$repository->findall();
+        $cupcakes = $repository->findBy([],['id'=> 'DESC']);
         return $this->render('user/compte.html.twig', [
             'cupcakes' => $cupcakes,
         ]);

@@ -1,6 +1,7 @@
 body{
     .aPropos{
         margin: 30vh 40vw 30vh 5vh;
+        font-size: 18px;
 
 
     }
@@ -8,6 +9,7 @@ body{
     section{
 
         h1{
+            font-size: 32px;
             a{
                 text-decoration: none;
                 color: inherit;
@@ -25,18 +27,19 @@ body{
             margin: 0px 20vw 10vh;     
             border-radius: 10px;     
             border: 2px solid transparent;
-  
+ 
             a{
                 text-decoration: none;
                 color: $bleu;
                 margin-right: 2vw;
                 border: 2px solid transparent;
-            }
-            a:hover{
-                border-top: 2px solid $rose;
-                border-bottom: 2px solid $rose;
-                transition: .4s;
-
+                transition: all 1s;
+                font-size: 22px;
+                &:hover{
+                    border-top: 2px solid $rose;
+                    border-bottom: 2px solid $rose;
+    
+                }
             }
             
         }
@@ -44,13 +47,22 @@ body{
             border: 2px dashed #ef85a563;
             transition: 1s;
         }
+        .filtreMobile{
+            display: none;
+            .categorie-select{
+                background-color: lightblue;
+                border-radius: 5px;
+                border: none;
+                padding: 5px 0;
+            }
+        }
         .container{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-row-gap: 5vh;
             justify-items: center;
             margin: auto;
-            .boxArticle {
+            .boxArticle, .boxArticleCompte {
                 background-color: $turquoise;
                 width: 340px;
                 height: 420px;
@@ -58,6 +70,7 @@ body{
                 border-radius: 170px;
                 border: 2px solid transparent;
                 box-shadow: 20px 38px 34px -16px hsla(0,0%,0%,.2);
+                transition: all 1s;
 
                 .nomCupArticle{
                     padding: 4vh 0 2vh 0;
@@ -76,7 +89,6 @@ body{
             }
             .boxArticle:hover{
                 box-shadow:9px 9px 10px -3px rgb(0 0 0 / 30%);
-                transition: 0.5s;
                 border: 2px dashed #2f57615e;
 
             }
@@ -100,6 +112,9 @@ body{
                 box-shadow: 10px 10px 10px #2f5761;
                 .nomCupArticleId {
                     padding: 4vh 0 3vh 0;
+                    h3{
+                        font-size: 24;
+                    }
     
                 }
                 .imgCupArticleId {

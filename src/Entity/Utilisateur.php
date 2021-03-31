@@ -38,6 +38,13 @@ class Utilisateur implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", 
+     * message="Vos mots de passe ne correspondent pas")
+     * 
+     */
+    private $verificationPassword;
     
 
     /**
@@ -106,6 +113,17 @@ class Utilisateur implements UserInterface
         return $this;
     }
 
+    public function getVerificationPassword(): ?string
+    {
+        return $this->verificationPassword;
+    }
+
+    public function setVerificationPassword(string $verificationPassword): self
+    {
+        $this->verificationPassword = $verificationPassword;
+
+        return $this;
+    }
     /**
      * Returning a salt is only needed, if you are not using a modern
      * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
@@ -154,5 +172,10 @@ class Utilisateur implements UserInterface
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->username;
     }
 }

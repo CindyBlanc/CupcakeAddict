@@ -25,11 +25,12 @@ class CupCakeController extends AbstractController
      */
     public function cupcake(CupcakeRepository $repository, CategorieRepository $repositoryCat): Response
     {
-        $cupcakes = $repository->findAll();
+        $cupcakes = $repository->findBy([],['id'=> 'DESC']);
         $categories = $repositoryCat->findAll();
         return $this->render('cup_cake/cupcakes.html.twig', [
             'cupcakes'=>$cupcakes,
             'categories'=>$categories,
+            
             ]);
     }
 
